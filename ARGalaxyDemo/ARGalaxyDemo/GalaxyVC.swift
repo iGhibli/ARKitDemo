@@ -50,12 +50,29 @@ class GalaxyVC: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.arSCNView.session.run(self.arSessionConfiguration)
     }
     
     func initNode() {
         self.sunNode = SCNNode.init()
-        self.sunNode.geometry = SCNSphere.init(radius: 0.25)
+        // 设置sunNode的几何形状为球型，并设置半径
+        self.sunNode.geometry = SCNSphere.init(radius: 0.5)
+        // 太阳贴图
+        self.sunNode.geometry?.firstMaterial?.multiply.contents = "art.scnassets/earth/sun.jpg"
+        self.sunNode.geometry?.firstMaterial?.diffuse.contents = "art.scnassets/earth/sun.jpg"
+        self.sunNode.geometry?.firstMaterial?.multiply.intensity = 0.5
+        self.sunNode.geometry?.firstMaterial?.lightingModel = SCNMaterial.LightingModel.constant
+        self.sunNode.geometry?.firstMaterial?.multiply.wrapS = SCNWrapMode.repeat
+        self.sunNode.geometry?.firstMaterial?.diffuse.wrapS = SCNWrapMode.repeat
+        self.sunNode.geometry?.firstMaterial?.multiply.wrapT = SCNWrapMode.repeat
+        self.sunNode.geometry?.firstMaterial?.diffuse.wrapT = SCNWrapMode.repeat
+        // 设置Node的三维坐标
+        self.sunNode.position = SCNVector3Make(0, -5, -10)
+        // 将sunNode节点添加到scene中
+        self.arSCNView.scene.rootNode.addChildNode(self.sunNode)
+        
+        
+        
 //        self.mercuryNode = SCNNode.init()
 //        self.venusNode = SCNNode.init()
 //        self.earthNode = SCNNode.init()
