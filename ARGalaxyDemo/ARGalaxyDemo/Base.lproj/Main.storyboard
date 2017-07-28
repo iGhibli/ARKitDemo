@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Asf-IM-M2S">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tXr-a1-R10">
+        <!--RootVC-->
+        <scene sceneID="83R-Jf-sjr">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                <viewController id="Asf-IM-M2S" customClass="RootVC" customModule="ARGalaxyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jHp-Xs-u20">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Z-BV-pWJ">
+                                <rect key="frame" x="94" y="303" width="187.5" height="62.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E1Z-BV-pWJ" secondAttribute="height" multiplier="3:1" id="4b8-QH-rSe"/>
+                                </constraints>
+                                <state key="normal" title="太阳系">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ge1-1T-Uzv" kind="show" id="3UU-lb-Syl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E1Z-BV-pWJ" firstAttribute="centerX" secondItem="jHp-Xs-u20" secondAttribute="centerX" id="CQq-2A-uO8"/>
+                            <constraint firstItem="E1Z-BV-pWJ" firstAttribute="width" secondItem="jHp-Xs-u20" secondAttribute="width" multiplier="0.5" id="WFu-qH-Nha"/>
+                            <constraint firstItem="E1Z-BV-pWJ" firstAttribute="centerY" secondItem="jHp-Xs-u20" secondAttribute="centerY" id="wDh-hr-IOF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P29-UQ-Xht"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6F-X1-1yK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="-8"/>
+        </scene>
+        <!--GalaxyVC-->
+        <scene sceneID="wmo-87-qaK">
+            <objects>
+                <viewController id="ge1-1T-Uzv" customClass="GalaxyVC" customModule="ARGalaxyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbM-yw-JM3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ce-72-Dau">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kST-Qj-C2b" firstAttribute="bottom" secondItem="9Ce-72-Dau" secondAttribute="bottom" id="ISG-4O-GnG"/>
+                            <constraint firstItem="9Ce-72-Dau" firstAttribute="top" secondItem="vbM-yw-JM3" secondAttribute="top" id="JeD-4g-fRF"/>
+                            <constraint firstItem="kST-Qj-C2b" firstAttribute="trailing" secondItem="9Ce-72-Dau" secondAttribute="trailing" id="MKe-JK-GLh"/>
+                            <constraint firstItem="9Ce-72-Dau" firstAttribute="leading" secondItem="kST-Qj-C2b" secondAttribute="leading" id="V8N-Q4-vnL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kST-Qj-C2b"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="arSCNView" destination="9Ce-72-Dau" id="edd-wE-JzL"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Jk-hZ-Skk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="692" y="-9.4452773613193415"/>
         </scene>
     </scenes>
 </document>

@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		53805A7D1F29DF9F002C318B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53805A7C1F29DF9F002C318B /* AppDelegate.swift */; };
 		53805A7F1F29DFA0002C318B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 53805A7E1F29DFA0002C318B /* art.scnassets */; };
-		53805A811F29DFA0002C318B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53805A801F29DFA0002C318B /* ViewController.swift */; };
 		53805A841F29DFA0002C318B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53805A821F29DFA0002C318B /* Main.storyboard */; };
 		53805A861F29DFA0002C318B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53805A851F29DFA0002C318B /* Assets.xcassets */; };
 		53805A891F29DFA1002C318B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53805A871F29DFA1002C318B /* LaunchScreen.storyboard */; };
+		D4759A011F2ADF3800ED748F /* GalaxyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4759A001F2ADF3800ED748F /* GalaxyVC.swift */; };
+		D4759A051F2AE26D00ED748F /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4759A041F2AE26D00ED748F /* RootVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53805A791F29DF9F002C318B /* ARGalaxyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARGalaxyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53805A7C1F29DF9F002C318B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53805A7E1F29DFA0002C318B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		53805A801F29DFA0002C318B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53805A831F29DFA0002C318B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53805A851F29DFA0002C318B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53805A881F29DFA1002C318B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53805A8A1F29DFA1002C318B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4759A001F2ADF3800ED748F /* GalaxyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyVC.swift; sourceTree = "<group>"; };
+		D4759A041F2AE26D00ED748F /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				53805A7C1F29DF9F002C318B /* AppDelegate.swift */,
 				53805A7E1F29DFA0002C318B /* art.scnassets */,
-				53805A801F29DFA0002C318B /* ViewController.swift */,
+				D4759A041F2AE26D00ED748F /* RootVC.swift */,
+				D4759A001F2ADF3800ED748F /* GalaxyVC.swift */,
 				53805A821F29DFA0002C318B /* Main.storyboard */,
 				53805A851F29DFA0002C318B /* Assets.xcassets */,
 				53805A871F29DFA1002C318B /* LaunchScreen.storyboard */,
@@ -139,7 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53805A811F29DFA0002C318B /* ViewController.swift in Sources */,
+				D4759A051F2AE26D00ED748F /* RootVC.swift in Sources */,
+				D4759A011F2ADF3800ED748F /* GalaxyVC.swift in Sources */,
 				53805A7D1F29DF9F002C318B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
