@@ -55,7 +55,7 @@ class GalaxyVC: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
     func initNode() {
         self.sunNode = SCNNode.init()
-        // 设置sunNode的几何形状为球型，并设置半径
+        // 设置sunNode的几何形状为球型，并设置半径为0.5
         self.sunNode.geometry = SCNSphere.init(radius: 0.5)
         // 太阳贴图
         self.sunNode.geometry?.firstMaterial?.multiply.contents = "art.scnassets/earth/sun.jpg"
@@ -70,7 +70,13 @@ class GalaxyVC: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         self.sunNode.position = SCNVector3Make(0, -5, -10)
         // 将sunNode节点添加到scene中
         self.arSCNView.scene.rootNode.addChildNode(self.sunNode)
-        
+        // 运行轨迹
+        let mercuryOrbit = SCNNode.init()
+        // 设置不透明度
+        mercuryOrbit.opacity = 0.4
+        // 设置轨道的结构体，height为0
+        mercuryOrbit.geometry = SCNBox.init(width: 0.86, height: 0, length: 0.86, chamferRadius: 0)
+        mercuryOrbit.geometry?.firstMaterial?.diffuse.contents = "art.scnassets/solar/orbit.png"
         
         
 //        self.mercuryNode = SCNNode.init()
